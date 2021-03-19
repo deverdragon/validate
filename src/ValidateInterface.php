@@ -1,4 +1,12 @@
 <?php
+/*
+ * @Description    : 
+ * @Version        : 1.0.0
+ * @Author         : QianLong
+ * @Date           : 2021-03-20 00:35:55
+ * @LastEditors    : QianLong
+ * @LastEditTime   : 2021-03-20 00:51:13
+ */
 
 namespace Qianlong\Validate;
 

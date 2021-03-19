@@ -1,5 +1,5 @@
 {
-    "name": "easyswoole/validate",
+    "name": "qianlong/validate",
     "type": "library",
     "description": "An efficient swoole framework",
     "keywords": [
@@ -8,12 +8,12 @@
         "async",
         "easyswoole"
     ],
-    "homepage": "https://www.easyswoole.com/",
+    "homepage": "http://ecapi.cn/",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "YF",
-            "email": "291323003@qq.com"
+            "name": "QianLong",
+            "email": "838808603@qq.com"
         }
     ],
     "require": {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "EasySwoole\\Validate\\": "src/"
+            "Qianlong\\Validate\\": "src/"
         }
     },
     "require-dev": {

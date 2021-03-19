@@ -65,7 +65,7 @@ private $defaultErrorMsg = [
 require_once "./vendor/autoload.php";
 
 $data = ['name' => 'blank', 'age' => 25];   // 验证数据
-$validate = new \EasySwoole\Validate\Validate();
+$validate = new \Qianlong\Validate\Validate();
 $validate->addColumn('name')->required();   // 给字段加上验证规则
 $validate->addColumn('age')->required()->max(18);
 $bool = $validate->validate($data); // 验证结果
@@ -95,7 +95,7 @@ if ($bool) {
 require_once "./vendor/autoload.php";
 
 $data = ['name' => 'blank', 'age' => 25];   // 验证数据
-$validate = new \EasySwoole\Validate\Validate();
+$validate = new \Qianlong\Validate\Validate();
 $validate->addColumn('name')->required('名字不为空');   // 给字段加上验证规则
 $validate->addColumn('age')->required('年龄不为空')->func(function($params, $key) {
     return $params instanceof \EasySwoole\Spl\SplArray && $key == 'age' && $params[$key] == 18;
@@ -126,7 +126,7 @@ if ($bool) {
 
 require_once "./vendor/autoload.php";
 
-class CustomValidator implements \EasySwoole\Validate\ValidateInterface
+class CustomValidator implements \Qianlong\Validate\ValidateInterface
 {
     /**
      * 返回当前校验规则的名字
@@ -157,7 +157,7 @@ class CustomValidator implements \EasySwoole\Validate\ValidateInterface
 
 // 待验证数据
 $data     = ['mobile' => '12312345678'];
-$validate = new \EasySwoole\Validate\Validate();
+$validate = new \Qianlong\Validate\Validate();
 // 自定义错误消息示例
 $validate->addColumn('mobile')->required('手机号不能为空')->callUserRule(new CustomValidator, '手机号格式不正确');
 $bool = $validate->validate($data); // 验证结果
